@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <title>Kanban - Board</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="style.css" type="text/css" rel="stylesheet" />
+  </head>
+  
+  <body>
+    <div id="main-flex-container">
+      <div id="header">
+        <div id="tabs">
+          <a class="tab" href="index.html">
+            Backlog
+          </a>
+          <div class="tab tab-selected">
+            Board
+          </div>
+        </div>
+        <div id="controls">
+          <select class="control-select">
+            <option value="1">Sprint 1</option>
+            <option value="2">Sprint 2</option>
+          </select>
+          <div id="add-button" class="control-button">
+            <span class="fas fa-plus-square icon"></span>
+            &nbsp;
+            Add task
+          </div>
+        </div>
+        <div id="content">
+          <div class="task-group-header">
+            <div>Task</div>
+            <div>Backlog</div>
+            <div>Active</div>
+            <div>Resolved</div>
+            <div>Closed</div>
+          </div>
+          <div class="task-group">
+            <div>
+              <span>HTML mockup</span>
+              <span class="hours">2</span>
+            </div>
+            <div></div>
+            <div>
+              <div class="task-card">
+                <span class="description">Backlog page mockup</span>
+                <span class="hours">1</span>
+              </div>
+              <div class="task-card">
+                <span class="description">Board page mockup</span>
+                <span class="hours">1</span>
+              </div>
+            </div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="task-group">
+            <div>
+              <span>Webpack setup</span>
+              <span class="hours">3</span>
+            </div>
+            <div>
+              <div class="task-card">
+                <span class="description">Write webpack.conf</span>
+                <span class="hours">3</span>
+              </div>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal-overlay" style="display: none;">
+      <div id="add-edit-modal">
+        <h2>Add task</h2>
+        <div class="input-group">
+          <label class="modal-label">Description</label>
+          <input type="text" class="styled-input" />
+        </div>
+        <div class="input-group">
+          <label class="modal-label">Hours</label>
+          <input type="number" class="styled-input" />
+        </div>
+        <div class="input-group">
+          <label class="modal-label">Type</label>
+          <select class="styled-input">
+            <option value="1">HTML mockup</option>
+            <option value="2">Initialize Webpack</option>
+          </select>
+        </div>
+        <div class="input-group" style="margin-bottom: 1rem;">
+          <label class="radio-label">
+            <input type="radio" name="type" value="task" />
+            Task
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="type" value="taskgroup" />
+            Task group
+          </label>
+        </div>
+        <div>
+          <button id="ok-button" role="button" class="styled-button confirm">Ok</button>
+          <button id="cancel-button" role="button" class="styled-button warning">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script>
+    $(function() {
+      $('#add-button').click(function() {
+        $('#modal-overlay').css('display', 'flex');
+      });
+      
+      var closeModal = function() {
+        $('#modal-overlay').css('display', 'none');
+      };
+      
+      $('#ok-button').click(closeModal);
+      $('#cancel-button').click(closeModal);
+    });
+  </script>
+</html>
