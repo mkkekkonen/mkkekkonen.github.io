@@ -1,0 +1,63 @@
+body {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.headings {
+  margin-top: 100px;
+}
+
+.image {
+  float: left;
+  padding: 0 3em 1em 0;
+}
+
+h4 {
+  margin-top: 70px;
+}
+
+.dev-list {
+  padding-left: 3rem;
+}
+
+.clear {
+  clear: both;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tech-list>* {
+  align-self: center;
+  cursor: default;
+  display: inline-block;
+  font-size: 36pt;
+  padding: 0.25em;
+}
+
+.tech-list>span {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: content-box;
+  display: inline-flex;
+  justify-content: center;
+  font-weight: bold;
+  line-height: 67px;
+  max-height: 67px;
+  user-select: none;
+}
+
+.social-links {
+  margin-bottom: 150px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.link>svg {
+  font-size: 24pt;
+  margin-right: 0.5em;
+}
