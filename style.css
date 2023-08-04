@@ -7,16 +7,24 @@ body {
 }
 
 .image {
-  float: left;
   padding: 0 3em 1em 0;
+}
+
+@media screen and (max-width: 664px) {
+  .image {
+    display: block;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 665px) {
+  .image {
+    float: left;
+  }
 }
 
 h4 {
   margin-top: 70px;
-}
-
-.dev-list {
-  padding-left: 3rem;
 }
 
 .clear {
