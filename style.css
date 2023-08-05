@@ -41,27 +41,38 @@ h4 {
   flex-wrap: wrap;
 }
 
-.tech-list>* {
+.tech-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tech-icon>* {
   align-self: center;
   cursor: default;
   display: inline-block;
   font-size: 36pt;
-  padding: 0.25em;
+  padding: 0.25em 0.25em 0;
 }
 
-.tech-list>span {
+.tech-icon>span {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: content-box;
   display: inline-flex;
-  justify-content: center;
+  font-size: 32pt;
   font-weight: bold;
-  line-height: 67px;
+  justify-content: center;
+  line-height: 50px;
   max-height: 67px;
   user-select: none;
 }
 
+.tech-icon>small {
+  font-size: 10pt;
+}
+
 .social-links {
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
 
 .link {
@@ -73,4 +84,5 @@ h4 {
 .link>svg {
   font-size: 24pt;
   margin-right: 0.5em;
+  width: 38px;
 }
