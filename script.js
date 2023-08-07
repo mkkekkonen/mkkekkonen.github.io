@@ -94,6 +94,11 @@ var socialLinks = [
     text: 'My blog at Hashnode',
   },
   {
+    iconClass: 'fa-solid fa-envelope',
+    href: 'mailto:mkkekkonen@protonmail.com',
+    text: 'mkkekkonen@protonmail.com',
+  },
+  {
     iconClass: 'fa-solid fa-square-root-variable',
     href: 'https://www.mkkekkonen.fi/math/',
     text: 'A math visualization project',
