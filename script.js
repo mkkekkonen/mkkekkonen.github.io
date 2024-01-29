@@ -16,6 +16,11 @@ var technologyIcons = [
   },
   {
     type: 'fa',
+    class: 'fa-solid fa-mobile-screen',
+    title: 'Ionic',
+  },
+  {
+    type: 'fa',
     class: 'fa-brands fa-node-js',
     title: 'Node.js',
   },
@@ -100,7 +105,7 @@ var socialLinks = [
   },
   {
     iconClass: 'fa-solid fa-square-root-variable',
-    href: 'https://www.mkkekkonen.fi/math/',
+    href: 'https://www.mathvisualized.dev/',
     text: 'A math visualization project',
   },
   {
