@@ -109,9 +109,9 @@ var socialLinks = [
     text: 'A math visualization project',
   },
   {
-    iconClass: 'fa-solid fa-rocket',
-    href: 'https://play.google.com/store/apps/details?id=com.mkkekkonen.spaceshooter&pli=1',
-    text: 'A space shooter game for Android',
+    iconClass: 'fa-solid fa-gamepad',
+    href: 'https://mkkekkonen.itch.io',
+    text: 'My profile at Itch.io',
   },
 ];
 
