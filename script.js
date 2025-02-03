@@ -5,6 +5,11 @@ var technologyIcons = [
     title: 'JavaScript',
   },
   {
+    type: 'text',
+    content: 'TS',
+    title: 'TypeScript',
+  },
+  {
     type: 'fa',
     class: 'fa-brands fa-react',
     title: 'React',
@@ -23,11 +28,6 @@ var technologyIcons = [
     type: 'fa',
     class: 'fa-brands fa-node-js',
     title: 'Node.js',
-  },
-  {
-    type: 'text',
-    content: 'TS',
-    title: 'TypeScript',
   },
   {
     type: 'text',
@@ -58,6 +58,11 @@ var technologyIcons = [
     type: 'fa',
     class: 'fa-brands fa-java',
     title: 'Java',
+  },
+  {
+    type: 'fa',
+    class: 'fa-solid fa-leaf',
+    title: 'Spring Boot',
   },
   {
     type: 'fa',
