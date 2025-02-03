@@ -1,0 +1,28 @@
+name: Deploy Homepage to Server
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy-to-server:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Deploy to server
+      uses: easingthemes/ssh-deploy@main
+      with:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+        REMOTE_USER: ${{ secrets.REMOTE_USER }}
+        SOURCE: "."
+        TARGET: "~${{ secrets.REMOTE_USER }}/homepage"
+        SCRIPT_AFTER_REQUIRED: "true"
+        SCRIPT_AFTER: |
+          cp ~/homepage/index.html /var/www/html/index.html
+          cp ~/homepage/style.css /var/www/html/style.css
+          cp ~/homepage/script.js /var/www/html/script.js
